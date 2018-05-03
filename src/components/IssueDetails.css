@@ -1,0 +1,8 @@
+.Detail {
+   padding-left: 2em;
+   padding-right: 2em;
+   text-align: left;
+}
+pre {
+   overflow-x: scroll
+}

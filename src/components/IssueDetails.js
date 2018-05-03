@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Markdown from 'markdown-to-jsx';
+import './IssueDetails.css';
 
 class IssueDetails extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class IssueDetails extends Component {
      })
      .then(() => { console.log(this.state.issue)});
   }
-  render(){
+  render() {
       let body,title;
       let issue = (this.state.issue) ? this.state.issue : "waiting ..." ;
       if( issue.body ) {
@@ -28,7 +29,7 @@ class IssueDetails extends Component {
       }
       console.log(title);
       return (
-          <div>
+          <div className ="Detail">
             <h1><Markdown>{title}</Markdown></h1>
             <Markdown>{body}</Markdown>
           </div>
